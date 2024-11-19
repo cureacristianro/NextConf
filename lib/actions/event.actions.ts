@@ -190,3 +190,19 @@ export async function getRelatedEventsByCategory({
     handleError(error)
   }
 }
+
+export async function getEventById(eventId: string) {
+  try {
+    await connectToDatabase();
+
+    const event = await Event.findById(eventId);
+    return JSON.parse(JSON.stringify(event));
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      console.error('Error in getEventById:', error.message);
+    } else {
+      console.error('Unknown error in getEventById:', error);
+    }
+    handleError(error);
+  }
+}

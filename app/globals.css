@@ -74,7 +74,8 @@
 }
 
 body {
-  font-family: var(--font-poppins)
+  font-family: var(--font-poppins);
+  background-color: #252525 !important;
 }
 
 .filter-grey {
@@ -99,122 +100,122 @@ body {
   /* TYPOGRAPHY */
   /* 64 */
   .h1-bold {
-    @apply font-bold text-[40px] leading-[48px] lg:text-[48px] lg:leading-[60px]  xl:text-[58px] xl:leading-[74px];
+    @apply font-bold text-[40px] leading-[48px] lg:text-[48px] lg:leading-[60px]  xl:text-[58px] xl:leading-[74px] custom-text-wh;
   }
 
   /* 40 */
   .h2-bold {
-    @apply font-bold text-[32px] leading-[40px] lg:text-[36px] lg:leading-[44px] xl:text-[40px] xl:leading-[48px];
+    @apply font-bold text-[32px] leading-[40px] lg:text-[36px] lg:leading-[44px] xl:text-[40px] xl:leading-[48px] custom-text-wh;
   }
 
   .h2-medium {
-    @apply font-medium text-[32px] leading-[40px] lg:text-[36px] lg:leading-[44px] xl:text-[40px] xl:leading-[48px];
+    @apply font-medium text-[32px] leading-[40px] lg:text-[36px] lg:leading-[44px] xl:text-[40px] xl:leading-[48px] custom-text-wh;
   }
 
   /* 36 */
   .h3-bold {
-    @apply font-bold text-[28px] leading-[36px] md:text-[36px] md:leading-[44px];
+    @apply font-bold text-[28px] leading-[36px] md:text-[36px] md:leading-[44px] custom-text-wh;
   }
 
   .h3-medium {
-    @apply font-medium text-[28px] leading-[36px] md:text-[36px] md:leading-[44px];
+    @apply font-medium text-[28px] leading-[36px] md:text-[36px] md:leading-[44px] custom-text-wh;
   }
 
   /* 32 */
   .h4-medium {
-    @apply font-medium text-[32px] leading-[40px];
+    @apply font-medium text-[32px] leading-[40px] custom-text-wh;
   }
 
   /* 28 */
   .h5-bold {
-    @apply font-bold text-[28px] leading-[36px];
+    @apply font-bold text-[28px] leading-[36px] custom-text-wh;
   }
 
   /* 24 */
   .p-bold-24 {
-    @apply font-bold text-[24px] leading-[36px];
+    @apply font-bold text-[24px] leading-[36px] custom-text-wh;
   }
 
   .p-medium-24 {
-    @apply font-medium text-[24px] leading-[36px];
+    @apply font-medium text-[24px] leading-[36px] custom-text-wh;
   }
 
   .p-regular-24 {
-    @apply font-normal text-[24px] leading-[36px];
+    @apply font-normal text-[24px] leading-[36px] custom-text-wh;
   }
 
   /* 20 */
   .p-bold-20 {
-    @apply font-bold text-[20px] leading-[30px] tracking-[2%];
+    @apply font-bold text-[20px] leading-[30px] tracking-[2%] custom-text-wh;
   }
 
   .p-semibold-20 {
-    @apply text-[20px] font-semibold leading-[30px] tracking-[2%];
+    @apply text-[20px] font-semibold leading-[30px] tracking-[2%] custom-text-wh;
   }
 
   .p-medium-20 {
-    @apply text-[20px] font-medium leading-[30px];
+    @apply text-[20px] font-medium leading-[30px] custom-text-wh;
   }
 
   .p-regular-20 {
-    @apply text-[20px] font-normal leading-[30px] tracking-[2%];
+    @apply text-[20px] font-normal leading-[30px] tracking-[2%] custom-text-wh;
   }
 
   /* 18 */
   .p-semibold-18 {
-    @apply text-[18px] font-semibold leading-[28px] tracking-[2%];
+    @apply text-[18px] font-semibold leading-[28px] tracking-[2%] custom-text-wh;
   }
 
   .p-medium-18 {
-    @apply text-[18px] font-medium leading-[28px];
+    @apply text-[18px] font-medium leading-[28px] custom-text-wh;
   }
 
   .p-regular-18 {
-    @apply text-[18px] font-normal leading-[28px] tracking-[2%];
+    @apply text-[18px] font-normal leading-[28px] tracking-[2%] custom-text-wh;
   }
 
   /* 16 */
   .p-bold-16 {
-    @apply text-[16px] font-bold leading-[24px];
+    @apply text-[16px] font-bold leading-[24px] custom-text-wh;
   }
 
   .p-medium-16 {
-    @apply text-[16px] font-medium leading-[24px];
+    @apply text-[16px] font-medium leading-[24px] custom-text-wh;
   }
 
   .p-regular-16 {
-    @apply text-[16px] font-normal leading-[24px];
+    @apply text-[16px] font-normal leading-[24px] custom-text-wh;
   }
 
   /* 14 */
   .p-semibold-14 {
-    @apply text-[14px] font-semibold leading-[20px];
+    @apply text-[14px] font-semibold leading-[20px] custom-text-wh;
   }
 
   .p-medium-14 {
-    @apply text-[14px] font-medium leading-[20px];
+    @apply text-[14px] font-medium leading-[20px] custom-text-wh;
   }
 
   .p-regular-14 {
-    @apply text-[14px] font-normal leading-[20px];
+    @apply text-[14px] font-normal leading-[20px] custom-text-wh;
   }
 
   /* 12 */
   .p-medium-12 {
-    @apply text-[12px] font-medium leading-[20px];
+    @apply text-[12px] font-medium leading-[20px] custom-text-wh;
   }
 
   /* SHADCN OVERRIDES */
   .select-field {
-    @apply w-full bg-grey-50 h-[54px] placeholder:text-grey-500 rounded-full p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent focus:ring-transparent !important;
+    @apply w-full bg-grey-50 h-[54px] placeholder:text-grey-500 rounded-full p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent focus:ring-transparent custom-bg !important;
   }
 
   .input-field {
-    @apply bg-grey-50 h-[54px] focus-visible:ring-offset-0 placeholder:text-grey-500 rounded-full p-regular-16 px-4 py-3 border-none focus-visible:ring-transparent !important;
+    @apply bg-grey-50 h-[54px] focus-visible:ring-offset-0 placeholder:text-grey-500 rounded-full p-regular-16 px-4 py-3 border-none focus-visible:ring-transparent custom-bg !important;
   }
 
   .textarea {
-    @apply bg-grey-50 flex flex-1 placeholder:text-grey-500 p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent !important;
+    @apply bg-grey-50 flex flex-1 placeholder:text-grey-500 p-regular-16 px-5 py-3 border-none focus-visible:ring-transparent custom-bg !important;
   }
 
   .button {
@@ -250,7 +251,7 @@ body {
 .cl-formButtonPrimary:hover,
 .cl-formButtonPrimary:focus,
 .cl-formButtonPrimary:active {
-  background-color: #705CF7
+  background-color: #347f97;
 }
 
 /* ========================================== REACT-DATEPICKER STYLES */
@@ -266,12 +267,36 @@ body {
 }
 
 .react-datepicker__day--selected {
-  background-color: #624cf5 !important;
+  background-color: #1c5264 !important;
   color: #ffffff !important;
   border-radius: 4px;
 }
 
 .react-datepicker__time-list-item--selected {
-  background-color: #624cf5 !important;
+  background-color: #1c5264 !important;
 }
 
+/* ========================================== CUSTOM COLORS */
+.custom-color {
+  background-color: #1c5264 !important;
+}
+
+.custom-color:hover {
+  background-color: #1c5264db !important;
+}
+
+.custom-color-text {
+  color: #0e7da2 !important;
+}
+
+.custom-bg {
+  background-color: #424242 !important;
+}
+
+.custom-bg-br {
+  background-color: #6c6c6c !important;
+}
+
+.custom-text-wh {
+  color: whitesmoke !important; 
+}

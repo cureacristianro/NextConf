@@ -21,30 +21,31 @@ export default async function Home({ searchParams }: SearchParamProps) {
 
   return (
     <>
-      <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10">
+      <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-10 custom-bg">
         <div className="wrapper grid grid-cols-1 gap-5 md:grid-cols-2 2xl:gap-0">
           <div className="flex flex-col justify-center gap-8">
-            <h1 className="h1-bold">Host, Connect, Celebrate: Your Events, Our Platform!</h1>
-            <p className="p-regular-20 md:p-regular-24">Book and learn helpful tips from 3,168+ mentors in world-class companies with our global community.</p>
+            <h1 className="h1-bold">Conferințele tale, logistica pe capul nostru!</h1>
+            <p className="p-regular-20 md:p-regular-24">Caută sau publică evenimente cu o ușurință nemaipomenită! </p>
             <Button size="lg" asChild className="button w-full sm:w-fit">
               <Link href="#events">
-                Explore Now
+                Caută Evenimente
               </Link>
             </Button>
           </div>
 
           <Image 
-            src="/assets/images/hero.png"
+            src="/assets/images/hero.jpg"
             alt="hero"
-            width={1000}
+            width={400}
             height={1000}
             className="max-h-[70vh] object-contain object-center 2xl:max-h-[50vh]"
+            style={{ borderRadius: '50px', marginLeft: '20%' }}
           />
         </div>
       </section> 
 
       <section id="events" className="wrapper my-8 flex flex-col gap-8 md:gap-12">
-        <h2 className="h2-bold">Trust by <br /> Thousands of Events</h2>
+        <h2 className="h2-bold">Caută un eveniment, <br /> în 2 click-uri ești înscris!</h2>
 
         <div className="flex w-full flex-col gap-5 md:flex-row">
           <Search />
@@ -53,8 +54,8 @@ export default async function Home({ searchParams }: SearchParamProps) {
 
         <Collection 
           data={events?.data}
-          emptyTitle="No Events Found"
-          emptyStateSubtext="Come back later"
+          emptyTitle="Nu s-au găsit evenimente"
+          emptyStateSubtext="Încearcă mai târziu"
           collectionType="All_Events"
           limit={6}
           page={page}
