@@ -11,7 +11,10 @@ import { handleError } from '@/lib/utils'
 import { CreateUserParams, UpdateUserParams } from '@/types'
 
 export async function createUser(user: CreateUserParams) {
-  user._id = user.clerkId
+  console.log("function createUser");
+  console.log("input user");
+  console.dir(user);
+  //user._id = user.clerkId
   try {
     await connectToDatabase()
 
