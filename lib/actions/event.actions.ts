@@ -5,6 +5,7 @@ import { revalidatePath } from "next/cache";
 import { connectToDatabase } from "@/lib/database";
 import Event from "@/lib/database/models/event.model";
 import User from "@/lib/database/models/user.model";
+import { clerkId2MongoId } from "@/lib/actions/user.actions"; 
 import Category from "@/lib/database/models/category.model";
 import { handleError } from "@/lib/utils";
 
@@ -34,20 +35,14 @@ const populateEvent = (query: any) => {
 
 // CREATE
 export async function createEvent({ userId, event, path }: CreateEventParams) {
+  const mongoDbUserId = await clerkId2MongoId(userId);
   try {
     await connectToDatabase();
-    console.log("Received userId:", userId);
-
-    const organizer = await User.findOne({ "clerkId": userId});
-    if (!organizer) {
-      console.error("Organizer not found for ID:", userId);
-      throw new Error("Organizer not found");
-    }
-
+  
     const newEvent = await Event.create({
       ...event,
       category: event.categoryId,
-      organizer: organizer._id,
+      organizer: mongoDbUserId,
     });
     console.log("Event created successfully:", newEvent);
 
