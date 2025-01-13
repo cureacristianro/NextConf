@@ -10,12 +10,23 @@ import { handleError } from '@/lib/utils'
 
 import { CreateUserParams, UpdateUserParams } from '@/types'
 
-export async function createUser(user: CreateUserParams) {
-  console.log("function createUser");
-  console.log("input user");
-  console.dir(user);
-  //user._id = user.clerkId
+export async function clerkId2MongoId(clerkId: string) {
   try {
+    await connectToDatabase();
+    console.log("Received clerkId: ", clerkId);
+    const userDoc = await User.findOne({ "clerkId": clerkId});
+    let mongoDbUserId = userDoc._id;
+    console.log("mongoDbUserId = ", mongoDbUserId);
+    return mongoDbUserId;
+  } catch (error) {
+    //handleError(error)
+    console.error("User not found for clerkId: ", clerkId);
+    throw new Error("User not found");
+  }
+}
+
+export async function createUser(user: CreateUserParams) {
+try {
     await connectToDatabase()
 
     const newUser = await User.create(user)
